@@ -67,12 +67,12 @@
                 adjust_layer {
 // --------------------------- giữ LOWER + RAISE cùng lúc ------------------------------------
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  F7 |  F8 |  F9 | F10 | F11 | F12  |
-// | BOOT | RST |BTCLR| USB | BLE |     |   |     |     |     |     |     |      |
+// | BOOT | RST |BTCLR| USB | BLE |     |   |     |     |     |     | RST | BOOT |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &kp F1      &kp F2     &kp F3     &kp F4       &kp F5       &kp F6    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-   &bootloader &sys_reset &bt BT_CLR &out OUT_USB &out OUT_BLE &trans    &trans &trans &trans &trans  &trans  &trans
+   &bootloader &sys_reset &bt BT_CLR &out OUT_USB &out OUT_BLE &trans    &trans &trans &trans &trans  &sys_reset &bootloader
    &trans      &trans     &trans     &trans       &trans       &trans    &trans &trans &trans &trans  &trans  &trans
                                      &trans       &trans       &trans    &trans &trans &trans
                         >;
